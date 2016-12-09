@@ -30,8 +30,14 @@ gulp.task('templates', () => {
       presets: ['es2015', 'react']
     }))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('.tmp/scripts'));
+    .pipe(gulp.dest('.tmp/templates'));
 });
+
+/*gulp.task('templates', () => {
+  return gulp.src('app/scripts/** /*.jsx')
+    .pipe($.jsx2example())
+    .pipe(gulp.dest('wwwroot/templates/'))
+});*/
 
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
